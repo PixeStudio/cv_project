@@ -1,0 +1,81 @@
+:root {
+  /* Basic colors */
+  --color-bg: #f9f9f9;
+  --color-text: #222;
+  --color-muted: #555;
+  --color-light: #777;
+
+  /* Typography */
+  --font-base: system-ui, sans-serif;
+  --font-size-xl: 2.5rem;
+  --font-size-lg: 1.25rem;
+  --font-size-base: 1rem;
+
+  /* Margins & paddings */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    padding: var(--space-md);
+    font-family: var(--font-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/*HEADER*/
+
+.cv-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.cv-header h1 {
+    font-size: var(--font-size-xl);
+    margin: 0;
+}
+
+.cv-title {
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-xs);
+    color: var(--font-size-lg);
+}
+
+.cv-tagline {
+    font-style: italic;
+    color: var(--color-light);
+}
+
+/*PERSONAL DATE*/
+
+.cv-contact {
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.cv-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-contact li {
+    margin: var(--space-xs) 0;
+    font-size: var(--font-size-base);
+}
+
+.cv-contact a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.cv-contact a:hover {
+    text-decoration: underline;
+}
