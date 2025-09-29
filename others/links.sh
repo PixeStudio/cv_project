@@ -1,0 +1,1 @@
+start "https://pixestudio.github.io/cv_project/"

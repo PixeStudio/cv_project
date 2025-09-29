@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dariusz Figura – CV</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Flags -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.7.0/css/flag-icons.min.css">
 </head>
 <body>
 
@@ -61,7 +64,23 @@
 <!-- RIGHT COLUMN -->
   <main class="main" aria-label="Main content with bio and sections">
     <div class="main-container">
-      <!-- Na start tylko intro -->
+      <div class="topbar">
+        <div class="lang-select-wrapper">
+          <span id="lang-flag" class="fi fi-gb"></span>
+          <select id="lang-switch"class="lang-select" aria-label="Select language">
+            <option value="en" selected>EN</option>
+            <option value="de">DE</option>
+            <option value="fr">FR</option>
+            <option value="pl">PL</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button class="theme-toggle" id="btn-theme" type="button" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="download" id="btn-download" type="button">Download PDF</button>
+        </div>
+      </div>
       <header class="intro">
         <h1>Professional and detail-oriented software developer</h1>
         <p>Focused on building clean and reliable web applications. Step 1: static layout. Interactivity and multilingual content will follow.</p>
@@ -69,6 +88,7 @@
     </div>
   </main>
 </div>
+<script src="js/script.js"></script>
 
 </body>
 </html>

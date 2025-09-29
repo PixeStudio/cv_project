@@ -115,7 +115,8 @@
 .contact li {
     display: grid;
     grid-template-columns: 24px 1fr;
-    align-items: start;
+    align-items: center;
+    justify-items: start;
     gap: 12px;
     margin: .55rem 0;
     color: #f2f6fa;
@@ -139,6 +140,62 @@
     flex-direction: column;
     gap: 24px;
     padding: 34px 36px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.lang-select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#lang-flag {
+    font-size: 1.2rem;
+}
+
+.lang-select {
+    appearance: none;
+    border: 0;
+    border-radius: 6px;
+    padding: 4px 8px;
+    background: var(--card);
+    color: var(--text-100);
+    box-shadow: var(--ring);
+    font-weight: 600;
+}
+
+[data-theme="light"] .lang-select {
+    background: #eef1f5;
+    color: #0b1116;
+    box-shadow: none;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-toggle,
+.download {
+    border: 0;
+    border-radius: 10px;
+    padding: 4px 8px;
+    background: var(--card);
+    color: var(--text-100);
+    cursor: pointer;
+}
+
+.download {
+    background: var(--blue-600);
+    color: #fff;
+    font-weight: 600;
+    padding: 4px 8px;
 }
 
 .intro {
