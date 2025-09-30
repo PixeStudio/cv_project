@@ -30,35 +30,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // > Theme toggle
 
-const btnTheme = document.getElementById('btn-theme');
-const THEME_KEY = 'cv_theme';
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('#btn-theme input');
+  const THEME_KEY = 'cv_theme';
 
-function setTheme(theme) {
+  function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    if (toggle) toggle.checked = (theme === 'light');
+    try { localStorage.setItem(THEME_KEY, theme); } catch {}
+  }
 
-    if (btnTheme) {
-        btnTheme.innerHTML = 
-        theme === 'light'
-            ? '<i class="fa-solid fa-sun"></i>'
-            : '<i class="fa-solid fa-moon"></i>'
-    }
+  // Inicjalizacja
+  const savedTheme = (() => {
+    try { return localStorage.getItem(THEME_KEY); } catch { return null; }
+  })();
+  setTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark');
 
-    try {
-        localStorage.setItem(THEME_KEY, theme);} catch{}
-}
+  // Obsługa zmiany
+  if (toggle) {
+    toggle.addEventListener('change', () => {
+      const next = toggle.checked ? 'light' : 'dark';
+      setTheme(next);
+    });
+  }
+});
 
-    const savedTheme = (() => {
-        try { return localStorage.getItem(THEME_KEY); } catch { return null; }
-    })();
-    setTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark');
-
-    if (btnTheme) {
-        btnTheme.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'light' ? 'dark' : 'light';
-            setTheme(next);
-        });
-}
 
 
 
