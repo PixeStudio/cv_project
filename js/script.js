@@ -53,6 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
       setTheme(next);
     });
   }
+
+  //pobieranie cv do pdf
+  const btnDownload = document.getElementById('btn-download');
+
+  if(btnDownload) {
+    btnDownload.addEventListener('click', () => {
+      const root = document.documentElement;
+
+      const restore = () => {
+        window.removeEventListener('afterprint', restore);
+      };
+      window.addEventListener('afterprint', restore);
+      window.print();
+    });
+  }
+
 });
 
 

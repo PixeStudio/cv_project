@@ -197,7 +197,9 @@
     display: inline-block;
     width: 56px;
     height: 28px;
+    border-radius: 28px;
     background: var(--theme-toggle);
+    background: transparent;
 }
 
 .theme-toggle input {
@@ -213,8 +215,9 @@
     left: 0;
     right: 0;
     bottom: 0;
+    inset: 0;
     background-color: var(--theme-toggle);
-    border-radius: 28px;
+    border-radius: inherit;
     transition: background-color 0.3s;
     display: flex;
     align-items: center;
