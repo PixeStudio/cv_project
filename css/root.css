@@ -1,0 +1,33 @@
+:root{
+  --blue-400:#4ea8de;  
+  --blue-700:#2e79a8;
+  --blue-800:#255f86;
+  --blue-600:#3a8dc2;
+
+  --bg-900:#0d1318;
+  --graphite:#161c22;
+  --text-100:#e5eaef;
+  --text-300:#c6ced6;
+  --muted:rgba(255,255,255,.7);
+  --card:#0f151b;
+  --theme-toggle: #444242;
+
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --ring:0 0 0 3px rgba(58,141,194,.25);
+}
+
+/* LIGHT THEME OVERRIDES */
+[data-theme="light"]{
+  --bg-900:#f4f6f8;
+  --graphite:#ffffff;
+  --text-100:#0b1116;
+  --text-300:#2b3742;
+  --muted:rgba(0,0,0,.6);
+  --card:#ffffff;
+}
+
+/*DARK THEME OVERRIDES*/
+[data-theme="dark"] body {
+    background: url(/assets/images/body_background.webp) center/cover no-repeat fixed;
+}
